@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EI Solutions Registration</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#0f4c81,#1b6fb8);
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+background:white;
+padding:35px;
+width:420px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2{
+text-align:center;
+color:#0f4c81;
+margin-bottom:20px;
+}
+
+label{
+font-size:14px;
+font-weight:bold;
+}
+
+input,select,textarea{
+width:100%;
+padding:10px;
+margin-top:5px;
+margin-bottom:12px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+textarea{
+height:60px;
+resize:none;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#1b6fb8;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0f4c81;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Registration</h2>
+
+<form>
+
+<label>Select Type</label>
+<select required>
+<option value="">Select</option>
+<option>Retailer</option>
+<option>Distributor</option>
+</select>
+
+<label>Name</label>
+<input type="text" placeholder="Enter Name" required>
+
+<label>Pincode</label>
+<input type="number" placeholder="Enter Pincode" required>
+
+<label>Shop Address</label>
+<textarea placeholder="Enter Shop Address"></textarea>
+
+<label>Shop Photo</label>
+<input type="file" required>
+
+<label>PAN Card</label>
+<input type="file" required>
+
+<label>Aadhaar Card</label>
+<input type="file" required>
+
+<button type="submit">Submit Registration</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
