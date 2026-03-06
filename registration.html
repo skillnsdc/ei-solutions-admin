@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,48 +12,54 @@ body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:linear-gradient(135deg,#0f4c81,#1b6fb8);
-display:flex;
-justify-content:center;
-align-items:center;
 min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .container{
 background:white;
-padding:35px;
+padding:40px;
 width:420px;
-border-radius:10px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
+border-radius:12px;
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
 h2{
 text-align:center;
 color:#0f4c81;
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 label{
-font-size:14px;
 font-weight:bold;
+font-size:14px;
 }
 
 input,select,textarea{
 width:100%;
-padding:10px;
-margin-top:5px;
-margin-bottom:12px;
+padding:12px;
+margin-top:6px;
+margin-bottom:15px;
 border-radius:6px;
 border:1px solid #ccc;
+font-size:14px;
+}
+
+input:focus,select:focus,textarea:focus{
+outline:none;
+border-color:#1b6fb8;
 }
 
 textarea{
-height:60px;
+height:70px;
 resize:none;
 }
 
 button{
 width:100%;
-padding:12px;
+padding:14px;
 background:#1b6fb8;
 border:none;
 color:white;
@@ -65,6 +72,13 @@ button:hover{
 background:#0f4c81;
 }
 
+.footer{
+text-align:center;
+margin-top:15px;
+font-size:12px;
+color:#888;
+}
+
 </style>
 
 </head>
@@ -73,7 +87,7 @@ background:#0f4c81;
 
 <div class="container">
 
-<h2>Registration</h2>
+<h2>Retailer / Distributor Registration</h2>
 
 <form>
 
@@ -84,29 +98,40 @@ background:#0f4c81;
 <option>Distributor</option>
 </select>
 
-<label>Name</label>
-<input type="text" placeholder="Enter Name" required>
+<label>Full Name</label>
+<input type="text" placeholder="Enter your name" required>
+
+<label>Email ID</label>
+<input type="email" placeholder="Enter email address" required>
+
+<label>Mobile Number</label>
+<input type="tel" placeholder="Enter mobile number" required>
 
 <label>Pincode</label>
-<input type="number" placeholder="Enter Pincode" required>
+<input type="number" placeholder="Enter pincode" required>
 
 <label>Shop Address</label>
-<textarea placeholder="Enter Shop Address"></textarea>
+<textarea placeholder="Enter shop address"></textarea>
 
-<label>Shop Photo</label>
+<label>Upload Shop Photo</label>
 <input type="file" required>
 
-<label>PAN Card</label>
+<label>Upload PAN Card</label>
 <input type="file" required>
 
-<label>Aadhaar Card</label>
+<label>Upload Aadhaar Card</label>
 <input type="file" required>
 
 <button type="submit">Submit Registration</button>
 
 </form>
 
+<div class="footer">
+EI SOLUTIONS Portal
+</div>
+
 </div>
 
 </body>
 </html>
+```
