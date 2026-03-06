@@ -1,0 +1,178 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EI Solutions Admin Panel</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+background:linear-gradient(135deg,#0f4c81,#1b6fb8);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.login-box{
+background:white;
+padding:40px;
+width:350px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+text-align:center;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#1b6fb8;
+border:none;
+color:white;
+font-size:16px;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0f4c81;
+}
+
+.dashboard{
+display:none;
+width:90%;
+max-width:1100px;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:#1b6fb8;
+color:white;
+padding:20px;
+border-radius:8px;
+text-align:center;
+font-size:18px;
+}
+
+.menu{
+margin-top:30px;
+}
+
+.menu button{
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN -->
+
+<div class="login-box" id="loginBox">
+
+<h2>Admin Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="error" style="color:red;"></p>
+
+</div>
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard" id="dashboard">
+
+<h2>EI SOLUTIONS ADMIN DASHBOARD</h2>
+
+<div class="cards">
+
+<div class="card">Total Users<br>0</div>
+
+<div class="card">Retailers<br>0</div>
+
+<div class="card">Distributors<br>0</div>
+
+<div class="card">Total Wallet<br>₹0</div>
+
+<div class="card">Total Business<br>₹0</div>
+
+<div class="card">Total Revenue<br>₹0</div>
+
+</div>
+
+<div class="menu">
+
+<button>Add Member</button>
+
+<button>View Members</button>
+
+<button>Wallet Management</button>
+
+<button>Business Reports</button>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+function login(){
+
+var user=document.getElementById("username").value;
+var pass=document.getElementById("password").value;
+
+if(user=="admin" && pass=="admin123"){
+
+document.getElementById("loginBox").style.display="none";
+document.getElementById("dashboard").style.display="block";
+
+}else{
+
+document.getElementById("error").innerText="Invalid Login";
+
+}
+
+}
+
+function logout(){
+
+location.reload();
+
+}
+
+</script>
+
+</body>
+</html>
+```
